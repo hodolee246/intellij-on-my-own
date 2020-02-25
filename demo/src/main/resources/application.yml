@@ -1,0 +1,16 @@
+#project
+server:
+  port: 81
+
+#db
+spring:
+  datasource:
+    url: jdbc:mariadb://127.0.0.1:3306/maria_test
+    username: root
+    password: 1111
+    driver-class-name: org.mariadb.jdbc.Driver
+  #jpa
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
