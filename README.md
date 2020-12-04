@@ -1,1 +1,1 @@
-# intellij-on-my-own mySQL
+어... 공부중?
