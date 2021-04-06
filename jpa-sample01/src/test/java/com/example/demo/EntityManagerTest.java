@@ -64,6 +64,13 @@ public class EntityManagerTest {
         // 새로운 team 추가
         Team team2 = new Team();
         team2.setName("teamB");
+        em.persist(team2);
         member.setTeam(team2);
+        em.persist(member);
+
+        Member findChangeTeamMember = em.find(Member.class, member.getId());
+        Team findChangeTeam = findMember.getTeam();
+
+        isTeamAndMember(team2, findChangeTeam, member, findChangeTeamMember);
     }
 }
