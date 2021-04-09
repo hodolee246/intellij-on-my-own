@@ -10,8 +10,8 @@ import javax.persistence.*;
 @Setter
 public class Member {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @Id
+    private String id;
 
     @Column(name = "USER_NAME")
     private String name;

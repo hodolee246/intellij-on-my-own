@@ -12,11 +12,13 @@ import java.util.List;
 @Getter
 public class Team {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @Id
+    private String id;
+
+    @Column(name = "TEAM_NAME")
+    private String name;
 
     @OneToMany(mappedBy = "team")
-    @Column(name = "TEAM_NAME")
     private List<Member> members = new ArrayList<>();
 
 }
